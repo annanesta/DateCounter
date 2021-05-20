@@ -20,9 +20,23 @@ namespace DateCounter
     /// </summary>
     public partial class MainWindow : Window
     {
+        //создание связи с другими компонентами
+        private Model model;
+        private Presenter presenter;
         public MainWindow()
         {
             InitializeComponent();
+            model = new Model();
+            presenter = new Presenter(model);
         }
+
+        private void LoadBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.model = this.presenter.Login(dayAndMonth.Text);
+            Update();
+        }
+
+        private void Update()
+        { textBlock.Text=this.model.Message; }
     }
 }

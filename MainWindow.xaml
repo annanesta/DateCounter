@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DateCounter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="DateCounter" Height="300
+        " Width="250">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Проверить" HorizontalAlignment="Left" Margin="49,114,0,0" VerticalAlignment="Top" Width="140" Height="20" Click="LoadBtn_Click"/>
+        <TextBox HorizontalAlignment="Left" Name="dayAndMonth" Height="23" Margin="49,86,0,0" TextWrapping="Wrap" Text="дд.мм" VerticalAlignment="Top" Width="140" Foreground="Gray"/>
+        <Label Content="Введите дату рождения"  HorizontalAlignment="Left" Margin="49,24,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
+        <Label Content="по типу: дд.мм"  HorizontalAlignment="Left" Margin="49,55,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
+        <TextBlock Name="textBlock" HorizontalAlignment="Left" Margin="49,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="140"/>
+
     </Grid>
 </Window>
